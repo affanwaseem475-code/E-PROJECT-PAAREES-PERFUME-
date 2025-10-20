@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paarees Perfume | Calvin Klein Collection</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- css link -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- AOS Animation Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* ===== GLOBAL STYLE ===== */
+    body {
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+
+    /* ===== HERO SECTION ===== */
+    .ck-hero {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.85)), url(/images/21d3474f88c53b8d54a372f2582c30e6.jpg) center/cover no-repeat;
+    }
+
+    .ck-hero {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 120px 0 60px;
+    }
+
+    .ck-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 80px;
+      color: transparent;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .ck-hero p {
+      font-size: 1.2rem;
+      color: #444;
+      margin-top: 10px;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .gold-title {
+            color: gold;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+    /* ===== CARD SECTION ===== */
+    .card-other {
+      background: rgba(0, 0, 0, 0.85);
+      border: 1px solid rgba(255, 215, 0, 0.15);
+      border-radius: 1rem;
+      transition: all 0.5s ease;
+      overflow: hidden;
+      height: 100%;
+      backdrop-filter: blur(6px);
+      color: #f0f0f0;
+    }
+
+    .card-other:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+    }
+
+    .card-img-top {
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+    }
+
+    .card-other:hover .card-img-top {
+      transform: scale(1.08);
+    }
+
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      color: gold;
+      font-size: 1.6rem;
+    }
+
+    .text-light {
+      color: #ddd !important;
+    }
+
+    .text-warning {
+      color: #e6c44a !important;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="p-3 navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <div id="logo"><img src="/images/output-onlinepngtools.png" alt="" class="logo">
+                <a class="navbar-brand fw-bold text-warning d-flex flex-column align-items-start" href="/index.html">
+                    <span class="brand-main">aarees</span>
+                    <span class="brand-sub">erfume</span>
+                </a></div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Collections
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item fw-bold" href="/dior.html">Dior</a></li>
+                <li><a class="dropdown-item fw-bold" href="/ck.html">CK</a></li>
+                <li><a class="dropdown-item fw-bold" href="/davidoff.html">Davidoff</a></li>
+                <li><a class="dropdown-item fw-bold" href="#">Other</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/About.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/Contact Us.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/faq.html">FAQ</a>
+            </li>
+          </ul>
+          <a href="/login.html" class="btn btn-shop px-4 fw-bold">Login</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <div class="ck-hero">
+      <div class="hero-content">
+        <h1 class="hero-title text-warning">Best Selling Brands Perfume</h1>
+        <p class="text-white">Discover timeless fragrances that define elegance & charm.</p>
+      </div>
+    </div>
+
+    <!-- CARD SECTION -->
+    <section class="container py-5">
+      <div class="d-flex justify-content-between">
+        <h2 class="text-center gold-title mb-5">Discover Other Perfume Beauty</h2>
+        <a href="/Other_Luxury_Perfume_Collection.docx"><button class="btn btn-warning rounded-pill p-3">📝 Download Perfume Detailed</button></a>
+
+      </div>
+      <div class="row g-4">
+        <!-- card 1 -->
+        <div class="col-md-4 d-flex" data-aos="zoom-in">
+          <div class="card card-other flex-fill">
+            <img src="/other image/5ce199e63a335b8a4cad391c38b72fd6.jpg" class="card-img-top" alt="CK One">
+            <div class="card-body text-center">
+              <h5 class="card-title">Armani Code</h5>
+              <p class="text-light">Sophisticated and seductive — citrus, olive blossom, and tonka bean.</p>
+              <p class="text-warning">$160</p>
+              <a href="/Armani Code.html" class="btn btn-shop mt-2">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="col-md-4 d-flex" data-aos="fade-up">
+          <div class="card card-other flex-fill">
+            <img src="/other image/ce3152d2c240708801ca23213e63d2c4.jpg" class="card-img-top" alt="Champion">
+            <div class="card-body text-center">
+              <h5 class="card-title">Versace Bright Crystal</h5>
+              <p class="text-light">Fresh and floral — pomegranate, peony, and lotus create a sparkling elegance.</p>
+              <p class="text-warning">$150</p>
+              <a href="/Versace.html" class="btn btn-shop mt-2">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div class="col-md-4 d-flex" data-aos="zoom-in">
+          <div class="card card-other flex-fill">
+            <img src="/other image/3de987e21a84cf577cfda2c4e607bba3.jpg" class="card-img-top" alt="Aqua Fern">
+            <div class="card-body text-center">
+              <h5 class="card-title">Hugo Boss Bottled</h5>
+              <p class="text-light">Classic woody fragrance — apple, cinnamon, and sandalwood.</p>
+              <p class="text-warning">$140</p>
+              <a href="/Hugo Boss.html" class="btn btn-shop mt-2">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- card 4 -->
+        <div class="col-md-4 d-flex" data-aos="fade-up">
+          <div class="card card-other flex-fill">
+            <img src="/other image/6c594a59c92162b1916d9bb06ffae7e1.jpg" class="card-img-top" alt="Forest Veil">
+            <div class="card-body text-center">
+              <h5 class="card-title">Gucci Bloom</h5>
+              <p class="text-light">Rich floral fragrance — jasmine, tuberose, and Rangoon creeper.</p>
+              <p class="text-warning">$155</p>
+              <a href="#" class="btn btn-shop mt-2">Shop Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 5 -->
+        <div class="col-md-4 d-flex" data-aos="fade-up">
+          <div class="card card-other flex-fill">
+            <img src="/other image/cf718b67c76dd4b07e8ccee8bcd064f7.jpg" class="card-img-top" alt="CK In2U">
+            <div class="card-body text-center">
+              <h5 class="card-title">Versace Dylan Blue</h5>
+              <p class="text-light">Bold and modern — bergamot, violet leaf, and musky woods.</p>
+              <p class="text-warning">$150</p>
+              <a href="#" class="btn btn-shop mt-2">Shop Now</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- card 6 -->
+        <div class="col-md-4 d-flex" data-aos="zoom-in">
+          <div class="card card-other flex-fill">
+            <img src="/other image/8d77a403745800e919499cba4ebe018a.jpg" class="card-img-top" alt="CK Shock">
+            <div class="card-body text-center">
+              <h5 class="card-title">Chanel Chance</h5>
+              <p class="text-light">Bright and playful — lemon, pink pepper, and jasmine petals.</p>
+              <p class="text-warning">$165</p>
+              <a href="#" class="btn btn-shop mt-2">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- card 7 -->
+        <div class="col-md-4 d-flex" data-aos="flip-left">
+          <div class="card card-other flex-fill">
+            <img src="/other image/38f867ebfb7f89db539ca8ddca005406.jpg" class="card-img-top" alt="CK Sheer Beauty">
+            <div class="card-body text-center">
+              <h5 class="card-title">Yves Saint Laurent Black Opium</h5>
+              <p class="text-light">Sweet and addictive — coffee, vanilla, and white flowers.</p>
+              <p class="text-warning">$160</p>
+              <a href="#" class="btn btn-shop mt-2">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- card 8 -->
+        <div class="col-md-4 d-flex" data-aos="flip-right">
+          <div class="card card-other flex-fill">
+            <img src="/other image/d9f39362350774e1fd7f5c12c966e685.jpg" class="card-img-top" alt="CK Obsession">
+            <div class="card-body text-center">
+              <h5 class="card-title">Tom Ford Black Orchid</h5>
+              <p class="text-light">Luxurious and sensual — dark florals, truffle, and patchouli.</p>
+              <p class="text-warning">$170</p>
+              <a href="#" class="btn btn-shop mt-2">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- card 9 -->
+        <div class="col-md-4 d-flex" data-aos="flip-right">
+          <div class="card card-other flex-fill">
+            <img src="/other image/71e7c252e6ae00fcf1cb3c803c2ed40b.jpg" class="card-img-top" alt="Citrus Breeze">
+            <div class="card-body text-center">
+              <h5 class="card-title">Jo Malone Peony & Blush Suede</h5>
+              <p class="text-light">Soft and romantic — peony, red apple, and suede create a delicate charm.</p>
+              <p class="text-warning">$150</p>
+              <a href="#" class="btn btn-shop mt-2">Shop Now</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-light pt-5 pb-4">
+    <div class="container text-center text-md-left">
+      <div class="row text-center text-md-left">
+
+        <!-- Company Info -->
+        <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Paarees Perfumes</h5>
+          <p>
+            We bring you an exclusive collection of perfumes from the most prestigious brands across the
+            globe.
+            Perfect fragrance for every occasion.
+          </p>
+        </div>
+
+        <!-- Links -->
+        <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Quick Links</h5>
+          <p><a href="/index.html" class="text-light text-decoration-none footer-link">Home</a></p>
+          <p><a href="/About.html" class="text-light text-decoration-none footer-link">About</a></p>
+          <p><a href="/Contact Us.html" class="text-light text-decoration-none footer-link">Contact</a></p>
+          <p><a href="/faq.html" class="text-light text-decoration-none footer-link">FAQ</a></p>
+        </div>
+        <!-- Categories -->
+        <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Collections</h5>
+          <p><a href="dior.html" class="text-light text-decoration-none footer-link">Dior Perfumes</a></p>
+          <p><a href="ck.html" class="text-light text-decoration-none footer-link">CK Perfumes</a></p>
+          <p><a href="davidoff.html" class="text-light text-decoration-none footer-link">Davidoff Perfumes</a>
+          </p>
+          <p><a href="/other.html" class="text-light text-decoration-none footer-link">Other Perfumes</a></p>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+          <p><i class="fas fa-home me-2"></i> Karachi, Pakistan</p>
+          <p>
+            <i class="fas fa-envelope me-2"></i>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=affanwaseem475@gmail.com,entityblade99@gmail.com,abdullahxx776@gmail.com,saadsul32@gmail.com,opg091625@gmail.com"
+              target="_blank" class="text-light text-decoration-none footer-link">
+              info@paresperfumes.com
+            </a>
+          </p>
+
+
+          <p><i class="fas fa-phone me-2"></i> +92 300 1234567</p>
+        </div>
+      </div>
+
+      <hr class="mb-4">
+
+      <!-- Social media + Copyright -->
+      <div class="row align-items-center">
+        <div class="col-md-7 col-lg-8">
+          <p class="text-center text-md-start">
+            © 2025 Paarees Perfumes | All Rights Reserved
+          </p>
+        </div>
+        <div class="col-md-5 col-lg-4">
+          <div class="text-center text-md-end">
+            <a href="#" class="btn btn-outline-light btn-floating m-1 footer-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="btn btn-outline-light btn-floating m-1 footer-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="btn btn-outline-light btn-floating m-1 footer-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="btn btn-outline-light btn-floating m-1 footer-link"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap & AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+</body>
+
+</html>

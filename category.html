@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paarees Perfume Collection</title>
+    <!-- Bootstrap css cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cinzel:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    .discover {
+        color: gold;
+        color: transparent;
+        font-weight: bolder;
+    }
+
+
+    #new-arrivals {
+        position: relative;
+        z-index: 10;
+        background: linear-gradient(135deg, #fffaf5 0%, #f8f0e7 100%);
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .category-card {
+    position: relative;
+    border: none;
+    background: linear-gradient(145deg, #2a2a2a, #2a2a2a); /* Updated background */
+    border-radius: 18px;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+    .category-card img {
+        display: block;
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+        z-index: 1;
+    }
+
+    .category-card:hover img {
+        transform: scale(1.04);
+        cursor: pointer;
+    }
+
+    .category-card .card-body {
+        position: relative;
+        z-index: 2;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .category-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .category-card h5 {
+        color: gold;
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .category-card p {
+        font-size: 0.95rem;
+        margin-bottom: 0.7rem;
+    }
+</style>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="p-3 navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <div id="logo"><img src="/images/output-onlinepngtools.png" alt="" class="logo">
+                <a class="navbar-brand fw-bold text-warning d-flex flex-column align-items-start" href="/index.html">
+                    <span class="brand-main">aarees</span>
+                    <span class="brand-sub">erfume</span>
+                </a></div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Collections
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item fw-bold" href="/dior.html">Dior</a></li>
+                                <li><a class="dropdown-item fw-bold" href="/ck.html">CK</a></li>
+                                <li><a class="dropdown-item fw-bold" href="/davidoff.html">Davidoff</a></li>
+                                <li><a class="dropdown-item fw-bold" href="/other.html">Other</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/About.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/Contact Us.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/faq.html">FAQ</a>
+                        </li>
+                    </ul>
+                    <a href="/login.html" class="btn btn-shop px-4 fw-bold">Login</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero" class="vh-100 d-flex align-items-center justify-content-center text-center text-white"
+            style="background: url('/bg.jpg') center/cover no-repeat; position: relative;">
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div>
+            <div class="position-relative z-1">
+                <h1 class="hero-title text-warning">Discover Paarees
+                    Perfumes</h1>
+                <p class="lead fs-2">Where timeless elegance meets modern luxury 💫</p>
+            </div>
+        </section>
+
+        <!-- TOGGLE BUTTONS -->
+        <div class="text-center my-5">
+            <button id="btn-ladies" class="btn btn-warning btn-lg rounded-pill me-3">💗 Ladies</button>
+            <button id="btn-gents" class="btn btn-outline-warning btn-lg rounded-pill me-3">🖤 Gents</button>
+            <button id="btn-common" class="btn btn-outline-warning btn-lg rounded-pill">🤍 Common</button>
+        </div>
+
+
+        <!-- LADIES SECTION -->
+        <section id="ladies" class="container mb-5">
+            <h2 class="text-center text-warning mb-5 fw-bold">💗 Ladies Perfume Collection</h2>
+            <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-4">
+                <!-- Card 1 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/ladies1.jpg" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Versace Bright Crystal</h5>
+                            <p class="text-white mb-2">Fresh and floral — pomegranate, peony, and lotus create a
+                                sparkling elegance.</p>
+                            <p class="fw-bold mb-3 text-warning">$150</p>
+                            <a href="/Versace.html" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/ladie2.jpg" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Velvet Rose</h5>
+                            <p class="text-white mb-2">Luxurious blend of rich roses wrapped in warm amber and soft
+                                musk</p>
+                            <p class="fw-bold mb-3  text-warning">$95</p>
+                            <a href="/Velvet Rose.html" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/ladies3.jpg" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Desire</h5>
+                            <p class="text-white mb-2">An alluring fusion of amber, vanilla, and exotic florals</p>
+                            <p class="fw-bold mb-3  text-warning">$120</p>
+                            <a href="/Dior Desire.html" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/ladies4.jpg" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Miss Dior</h5>
+                            <p class="text-white mb-2">A graceful bouquet of rose, peony, and patchouli</p>
+                            <p class="fw-bold mb-3  text-warning">$155</p>
+                            <a href="/Miss Dior.html" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/Levender-dream-1.jpeg" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Lavender Dreams</h5>
+                            <p class="text-white mb-2">A soothing blend of fresh lavender, soft vanilla, and calming
+                                musk</p>
+                            <p class="fw-bold mb-3  text-warning">$78</p>
+                            <a href="#" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/PinkBlossom50ml-ScentYou-ForHer2.jpg" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Pink Bloom</h5>
+                            <p class="text-white mb-2">A vibrant mix of peony, rose, and sweet berries</p>
+                            <p class="fw-bold mb-3  text-warning">$70</p>
+                            <a href="#" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/mystic gardan.png" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Mystic Garden</h5>
+                            <p class="text-white mb-2">An enchanting blend of jasmine, sandalwood, and green notes</p>
+                            <p class="fw-bold mb-3  text-warning">$90</p>
+                            <a href="#" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 8 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/cherry blossom.jpg" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Cherry Blossom</h5>
+                            <p class="text-white mb-2">A delicate fusion of soft cherry petals, white musk</p>
+                            <p class="fw-bold mb-3  text-warning">$75</p>
+                            <a href="#" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GENTS SECTION -->
+        <section id="gents" class="container mb-5" style="display:none;">
+            <h2 class="text-center text-warning mb-5 fw-bold">🖤 Gents Perfume Collection</h2>
+            <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-4">
+                <!-- Card 1 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/other image/3de987e21a84cf577cfda2c4e607bba3.jpg" class="card-img-top"
+                            alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Hugo Boss Bottled</h5>
+                            <p class="text-white mb-2">Classic woody fragrance — apple, cinnamon, and sandalwood.</p>
+                            <p class="fw-bold mb-3  text-warning">$140</p>
+                            <a href="/Hugo Boss.html" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/gents2.jpg" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">9PM</h5>
+                            <p class="text-white mb-2">A timeless fusion of warm musk and soft spice</p>
+                            <p class="fw-bold mb-3  text-warning">$88</p>
+                            <a href="/9PM.html" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/gents3.jpg" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Armani Code</h5>
+                            <p class="text-white mb-2">Luxurious oud with a golden amber heart</p>
+                            <p class="fw-bold mb-3  text-warning">$160</p>
+                            <a href="/Armani Code.html" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/gents4.jpg" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Valentino</h5>
+                            <p class="text-white mb-2">Fresh pine with earthy undertones</p>
+                            <p class="fw-bold mb-3  text-warning">$83</p>
+                            <a href="/Valentino.html" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/azure.jpeg" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Azure Mist</h5>
+                            <p class="text-white mb-2">A refreshing breeze of oceanic notes</p>
+                            <p class="fw-bold mb-3  text-warning">$84</p>
+                            <a href="#" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/mystic edge.png" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Mystic Edge</h5>
+                            <p class="text-white mb-2">A mysterious mix of leather and spice</p>
+                            <p class="fw-bold mb-3  text-warning">$99</p>
+                            <a href="#" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/magnetic soul.png" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Magnetic Soul</h5>
+                            <p class="text-white mb-2">Intense musk with citrus sparks</p>
+                            <p class="fw-bold mb-3  text-warning">$84</p>
+                            <a href="#" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 8 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/RoyalBreeze-200-50ml-3.jpg" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Royal Breeze</h5>
+                            <p class="text-white mb-2">A regal touch of lavender and sandalwood</p>
+                            <p class="fw-bold mb-3  text-warning">$64</p>
+                            <a href="#" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMMON SECTION -->
+        <section id="common" class="container mb-5" style="display:none;">
+            <h2 class="text-center text-warning mb-5 fw-bold">🤍 Common Perfume Collection</h2>
+            <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-4">
+                <!-- Card 1 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/Davidoff image/davi-coolwater.jpg" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Cool Water</h5>
+                            <p class="text-white mb-2">Classic aquatic fragrance — fresh, minty, and timeless.</p>
+                            <p class="fw-bold mb-3  text-warning">$125</p>
+                            <a href="/cool water.html" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/uni2.jpg" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Blue Magician</h5>
+                            <p class="text-white mb-2">A gentle swirl of honey and vanilla</p>
+                            <p class="fw-bold mb-3  text-warning">$82</p>
+                            <a href="/Blue Magician.html" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/Davidoff image/davi-cool elixir.jpg" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Cool Elixir</h5>
+                            <p class="text-white mb-2">Refreshing aquatic-herbal scent — crisp, cool, and invigorating.
+                            </p>
+                            <p class="fw-bold mb-3  text-warning">$88</p>
+                            <a href="/cool elixir.html" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/uni4.jpg" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Bleu De Chanel</h5>
+                            <p class="text-white mb-2">A sleek blend of wood and musk tones</p>
+                            <p class="fw-bold mb-3  text-warning">$75</p>
+                            <a href="/Blue De Chanel.html" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/cloud nine.png" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Cloud Nine</h5>
+                            <p class="text-white mb-2">Airy florals and creamy musk</p>
+                            <p class="fw-bold mb-3  text-warning">$78</p>
+                            <a href="#" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/images.jpeg" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Hidden Flame</h5>
+                            <p class="text-white mb-2">A secret spark of spice and amber</p>
+                            <p class="fw-bold mb-3  text-warning">$65</p>
+                            <a href="#" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/golden night.jpeg" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Golden Night</h5>
+                            <p class="text-white mb-2">Deep oud kissed with golden light</p>
+                            <p class="fw-bold mb-3  text-warning">$77</p>
+                            <a href="#" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 8 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card  rounded-4 overflow-hidden category-card h-100">
+                        <img src="/ty img/Pure-Harmony.jpg" class="card-img-top" alt="Perfume 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-semibold">Pure Harmony</h5>
+                            <p class="text-white mb-2">Balanced notes of citrus and musk</p>
+                            <p class="fw-bold mb-3  text-warning">$59</p>
+                            <a href="#" class="btn btn-shop mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-light pt-5 pb-4">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+
+                <!-- Company Info -->
+                <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Paarees Perfumes</h5>
+                    <p>
+                        We bring you an exclusive collection of perfumes from the most prestigious brands across the
+                        globe.
+                        Perfect fragrance for every occasion.
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Quick Links</h5>
+                    <p><a href="/index.html" class="text-light text-decoration-none footer-link">Home</a></p>
+                    <p><a href="/About.html" class="text-light text-decoration-none footer-link">About</a></p>
+                    <p><a href="/Contact Us.html" class="text-light text-decoration-none footer-link">Contact</a></p>
+                    <p><a href="/faq.html" class="text-light text-decoration-none footer-link">FAQ</a></p>
+                </div>
+                <!-- Categories -->
+                <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Collections</h5>
+                    <p><a href="dior.html" class="text-light text-decoration-none footer-link">Dior Perfumes</a></p>
+                    <p><a href="ck.html" class="text-light text-decoration-none footer-link">CK Perfumes</a></p>
+                    <p><a href="davidoff.html" class="text-light text-decoration-none footer-link">Davidoff Perfumes</a>
+                    </p>
+                    <p><a href="/other.html" class="text-light text-decoration-none footer-link">Other Perfumes</a></p>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                    <p><i class="fas fa-home me-2"></i> Karachi, Pakistan</p>
+                    <p>
+                        <i class="fas fa-envelope me-2"></i>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=affanwaseem475@gmail.com,entityblade99@gmail.com,abdullahxx776@gmail.com,saadsul32@gmail.com,opg091625@gmail.com"
+                            target="_blank" class="text-light text-decoration-none footer-link">
+                            info@paresperfumes.com
+                        </a>
+                    </p>
+
+
+                    <p><i class="fas fa-phone me-2"></i> +92 300 1234567</p>
+                </div>
+            </div>
+
+            <hr class="mb-4">
+
+            <!-- Social media + Copyright -->
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-start">
+                        © 2025 Paarees Perfumes | All Rights Reserved
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end">
+                        <a href="#" class="btn btn-outline-light btn-floating m-1 footer-link"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1 footer-link"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1 footer-link"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1 footer-link"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Category Toggle Script -->
+    <script>
+        $(document).ready(function () {
+
+            // ✅ Function to show one section and hide others
+            function showPerfumeSection(section) {
+                const sections = ['ladies', 'gents', 'common'];
+
+                // Hide all sections
+                sections.forEach(s => $('#' + s).hide());
+
+                // Show selected section
+                $('#' + section).fadeIn(400);
+
+                // Update button colors
+                sections.forEach(s => {
+                    const btn = $('#btn-' + s);
+                    if (s === section) {
+                        btn.removeClass('btn-outline-warning').addClass('btn-warning');
+                    } else {
+                        btn.removeClass('btn-warning').addClass('btn-outline-warning');
+                    }
+                });
+            }
+
+            // ✅ Read ?section= parameter from URL (from home page links)
+            const params = new URLSearchParams(window.location.search);
+            const sectionFromURL = params.get('section') || 'ladies';
+            showPerfumeSection(sectionFromURL);
+
+            // ✅ Button clicks (no inline onclicks needed)
+            $('#btn-ladies').on('click', () => showPerfumeSection('ladies'));
+            $('#btn-gents').on('click', () => showPerfumeSection('gents'));
+            $('#btn-common').on('click', () => showPerfumeSection('common'));
+        });
+    </script>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

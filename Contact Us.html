@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parees Perfumes | Contact Us</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- CSS LINK -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <style>
+    /* ===== HERO SECTION ===== */
+    .hero-section {
+      position: relative;
+      background: url('/images/front-view-perfume-bottle-flowers-light-blue-background-free-space_140725-145522.jpg') center/cover no-repeat;
+      height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      animation: fadeInUp 1.6s ease;
+    }
+
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      color: #ffd700;
+      letter-spacing: 1.5px;
+      text-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #f2f2f2;
+      margin-top: 15px;
+      font-weight: 300;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact-section {
+      padding: 100px 0;
+      background: linear-gradient(180deg, #0b0b0b 0%, #141414 100%);
+    }
+
+    .contact-section h2 {
+      font-family: 'Playfair Display', serif;
+      color: #ffd700;
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .divider {
+      width: 90px;
+      height: 3px;
+      background: linear-gradient(90deg, #ffd700, #ffb400);
+      margin: 0 auto 40px;
+      border-radius: 5px;
+    }
+
+    /* ===== CONTACT INFO ===== */
+    .contact-info {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 215, 0, 0.15);
+      border-radius: 20px;
+      padding: 40px 30px;
+      height: 100%;
+      transition: 0.3s;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.05);
+    }
+
+    .contact-info:hover {
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
+      transform: translateY(-5px);
+    }
+
+    .contact-info i {
+      font-size: 1.8rem;
+      color: #ffd700;
+      margin-bottom: 15px;
+    }
+
+    .contact-info h5 {
+      color: #ffd700;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .contact-info p {
+      color: #bcbcbc;
+      font-size: 0.95rem;
+    }
+
+    /* ===== CONTACT FORM ===== */
+    .contact-form {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 215, 0, 0.2);
+      padding: 40px 35px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.08);
+      transition: 0.3s;
+    }
+
+    .contact-form:hover {
+      box-shadow: 0 0 35px rgba(255, 215, 0, 0.12);
+    }
+
+    .form-control {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid #333;
+      color: #fff;
+      border-radius: 12px;
+      padding: 14px;
+      transition: 0.3s;
+    }
+
+    .form-control:focus {
+      border-color: #ffd700;
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .btn-send {
+      background: linear-gradient(90deg, #ffd700, #ffb400);
+      color: #000;
+      font-weight: 600;
+      border: none;
+      border-radius: 25px;
+      padding: 14px 40px;
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-send:hover {
+      background: linear-gradient(90deg, #ffb400, #ffd700);
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    }
+
+    /* ===== MAP SECTION ===== */
+    .map-section h2 {
+      color: #ffd700;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .map-container {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+      filter: grayscale(25%) brightness(85%);
+    }
+
+    .map-border {
+      position: absolute;
+      inset: 0;
+      border: 2px solid rgba(255, 215, 0, 0.3);
+      border-radius: 20px;
+      pointer-events: none;
+    }
+
+    /* ===== THANK YOU POPUP ===== */
+    .thankyou-popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .thankyou-popup .popup-content {
+      background: linear-gradient(180deg, #1a1a1a 0%, #111 100%);
+      border: 1px solid rgba(255, 215, 0, 0.2);
+      border-radius: 20px;
+      text-align: center;
+      padding: 50px 40px;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+      max-width: 400px;
+    }
+
+    .thankyou-popup i {
+      font-size: 3rem;
+      color: #ffd700;
+      margin-bottom: 15px;
+    }
+
+    .thankyou-popup h3 {
+      font-family: 'Playfair Display', serif;
+      color: #ffd700;
+      margin-bottom: 10px;
+    }
+
+    .thankyou-popup p {
+      color: #ccc;
+      font-size: 1rem;
+      margin-bottom: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+    <header>
+        <nav class="p-3 navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <div id="logo"><img src="/images/output-onlinepngtools.png" alt="" class="logo">
+                <a class="navbar-brand fw-bold text-warning d-flex flex-column align-items-start" href="/index.html">
+                    <span class="brand-main">aarees</span>
+                    <span class="brand-sub">erfume</span>
+                </a></div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Collections
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item fw-bold" href="/dior.html">Dior</a></li>
+                                <li><a class="dropdown-item fw-bold" href="/ck.html">CK</a></li>
+                                <li><a class="dropdown-item fw-bold" href="/davidoff.html">Davidoff</a></li>
+                                <li><a class="dropdown-item fw-bold" href="/other.html">Other</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/About.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/faq.html">FAQ</a>
+                        </li>
+                    </ul>
+                    <a href="/login.html" class="btn btn-shop px-4 fw-bold">Login</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Contact Parees Perfumes</h1>
+      <p>Where luxury meets fragrance — let’s connect</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact-section text-center">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8">
+          <h2 class="text-center mb-5 display-5"
+            style="font-family: 'Segoe UI', sans-serif; color: transparent; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #FFD700; font-weight: bolder;">
+            We’d Love to Hear From You
+          </h2>
+          <div class="divider"></div>
+          <p>Whether you have questions about our perfumes, want to become a distributor, or simply wish to share your
+            feedback, we’re always here for you.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Contact Info -->
+        <div class="col-lg-4">
+          <div class="contact-info text-start">
+            <i class="bi bi-geo-alt-fill"></i>
+            <h5>Our Address</h5>
+            <p>123 Aroma Street, Karachi, Pakistan</p>
+            <hr>
+            <i class="bi bi-envelope-fill"></i>
+            <h5>Email Us</h5>
+            <p><a href="mailto:info@pareesperfumes.com"
+                style="color:#ffd700; text-decoration:none;">info@pareesperfumes.com</a></p>
+            <hr>
+            <i class="bi bi-telephone-fill"></i>
+            <h5>Call Us</h5>
+            <p>+92 300 1234567</p>
+            <hr>
+            <i class="bi bi-clock-fill"></i>
+            <h5>Business Hours</h5>
+            <p>Mon - Sat: 10AM - 8PM<br>Sunday: Closed</p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-lg-8">
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="col-12">
+                  <input type="text" class="form-control" placeholder="Subject (Optional)">
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <div class="col-12 mt-4 text-center">
+                  <button type="submit" class="btn-send">Send Message</button>
+                </div>
+              </div>
+            </form>
+            <p class="mt-4 mb-0  small text-white">💌 For business collaborations or reseller inquiries, please email <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=affanwaseem475@gmail.com,entityblade99@gmail.com,abdullahxx776@gmail.com,saadsul32@gmail.com,opg091625@gmail.com"
+                target="_blank" class="text-warning text-decoration-none footer-link">
+                info@paresperfumes.com
+              </a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ===== MAP SECTION (Fixed + Directions Button) ===== -->
+  <section class="map-section py-5">
+    <div class="container text-center">
+      <h2 class="text-center mb-5 display-5"
+        style="font-family: 'Segoe UI', sans-serif; color: transparent; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #FFD700; font-weight: bolder;">
+        Find Us On The Map
+      </h2>
+      <div class="divider"></div>
+      <p class="mb-4">Visit our boutique and experience the world of Parees Perfumes in person.</p>
+
+      <div class="map-container mb-4">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28932.273562281705!2d67.0271551743164!3d24.981958000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb340e584b891c3%3A0x29b2cbc198ba2dbd!2sAptech%20Computer%20Education%20North%20Karachi%20Center!5e0!3m2!1sen!2s!4v1760615014805!5m2!1sen!2s"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-border"></div>
+      </div>
+
+      <a href="https://www.google.com/maps/place/Aptech+Computer+Education+North+Karachi+Center/@24.981958,67.0271552,14z/data=!4m10!1m2!2m1!1saptech!3m6!1s0x3eb340e584b891c3:0x29b2cbc198ba2dbd!8m2!3d24.9819581!4d67.0652637!15sCgZhcHRlY2giA4gBAVoIIgZhcHRlY2iSARhjb21wdXRlcl90cmFpbmluZ19zY2hvb2yqAVQKDS9nLzExYmM2bGNiNGoKCS9tLzA3OGx2axABKgoiBmFwdGVjaCgAMh4QASIayBFT1bMUYPH8PrAvHUIx6rBtLhdLSI1olMwyChACIgZhcHRlY2jgAQA!16s%2Fg%2F1q62dtbrn?entry=ttu&g_ep=EgoyMDI1MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank" class="btn-send">Get Directions</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+    <footer class="bg-dark text-light pt-5 pb-4">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+
+                <!-- Company Info -->
+                <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Paarees Perfumes</h5>
+                    <p>
+                        We bring you an exclusive collection of perfumes from the most prestigious brands across the
+                        globe.
+                        Perfect fragrance for every occasion.
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Quick Links</h5>
+                    <p><a href="/index.html" class="text-light text-decoration-none footer-link">Home</a></p>
+                    <p><a href="/About.html" class="text-light text-decoration-none footer-link">About</a></p>
+                    <p><a href="/Contact Us.html" class="text-light text-decoration-none footer-link">Contact</a></p>
+                    <p><a href="/faq.html" class="text-light text-decoration-none footer-link">FAQ</a></p>
+                </div>
+                <!-- Categories -->
+                <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Collections</h5>
+                    <p><a href="dior.html" class="text-light text-decoration-none footer-link">Dior Perfumes</a></p>
+                    <p><a href="ck.html" class="text-light text-decoration-none footer-link">CK Perfumes</a></p>
+                    <p><a href="davidoff.html" class="text-light text-decoration-none footer-link">Davidoff Perfumes</a>
+                    </p>
+                    <p><a href="/other.html" class="text-light text-decoration-none footer-link">Other Perfumes</a></p>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                    <p><i class="fas fa-home me-2"></i> Karachi, Pakistan</p>
+                    <p>
+                        <i class="fas fa-envelope me-2"></i>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=affanwaseem475@gmail.com,entityblade99@gmail.com,abdullahxx776@gmail.com,saadsul32@gmail.com,opg091625@gmail.com"
+                            target="_blank" class="text-light text-decoration-none footer-link">
+                            info@paresperfumes.com
+                        </a>
+                    </p>
+
+
+                    <p><i class="fas fa-phone me-2"></i> +92 300 1234567</p>
+                </div>
+            </div>
+
+            <hr class="mb-4">
+
+            <!-- Social media + Copyright -->
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-start">
+                        © 2025 Paarees Perfumes | All Rights Reserved
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end">
+                        <a href="#" class="btn btn-outline-light btn-floating m-1 footer-link"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1 footer-link"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1 footer-link"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1 footer-link"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  <!-- ===== THANK YOU POPUP ===== -->
+  <div class="thankyou-popup" id="thankyouPopup">
+    <div class="popup-content">
+      <i class="bi bi-check-circle-fill"></i>
+      <h3>Thank You!</h3>
+      <p>Your message has been sent successfully.<br>We’ll get back to you shortly.</p>
+      <button class="btn-send" onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const contactForm = document.getElementById('contactForm');
+    const thankyouPopup = document.getElementById('thankyouPopup');
+
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      thankyouPopup.style.display = 'flex';
+      contactForm.reset();
+    });
+
+    function closePopup() {
+      thankyouPopup.style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>

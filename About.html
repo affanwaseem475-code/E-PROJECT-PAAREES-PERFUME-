@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cinzel:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<style>
+    :root {
+        --primary-gold: #ffc107;
+        --dark-bg: #1c1b1b;
+        --card-bg: #2a2a2a;
+        --card-hover: #333;
+    }
+
+    body {
+        background-color: #1c1b1b;
+        color: white;
+        overflow-x: hidden;
+    }
+
+    .about,
+    .feature-section,
+    .Benefit {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: var(--primary-gold);
+        font-weight: bolder;
+    }
+
+    .Discount {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: var(--primary-gold);
+        font-weight: bolder;
+    }
+
+    /* Hero Section */
+    .hero-video-section {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    @media (max-width: 768px) {
+        .hero-video-section {
+            height: 50vh;
+        }
+    }
+
+    .hero-video-section video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 2;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 3;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .hero-title {
+        font-family: 'Playfair Display', serif;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Feature & Benefit Boxes */
+    .feature-box,
+    .benefit-box {
+        background-color: var(--card-bg);
+        border: 1px solid #333;
+        padding: 30px 20px;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+        height: 100%;
+    }
+
+    .feature-box:hover,
+    .benefit-box:hover {
+        background-color: var(--card-hover);
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Team Section */
+    .team-member {
+        background-color: var(--card-bg);
+        border-radius: 10px;
+        padding: 25px 15px;
+        transition: all 0.3s;
+        height: 100%;
+    }
+
+    .team-member:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .team-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 15px;
+        border: 3px solid var(--primary-gold);
+    }
+
+    /* Stats Section */
+    .stats .value {
+        font-size: 2.5rem;
+        color: var(--primary-gold);
+        font-weight: bold;
+    }
+
+    @media (max-width: 576px) {
+        .stats .value {
+            font-size: 2rem;
+        }
+    }
+
+    /* Promo Section */
+    .promo img {
+        width: 100%;
+        border-radius: 10px;
+        transition: transform 0.3s;
+    }
+
+    .promo img:hover {
+        transform: scale(1.02);
+    }
+
+    .text-gold {
+        color: var(--primary-gold);
+    }
+</style>
+
+<body>
+    <!-- NAVBAR -->
+    <header>
+        <nav class="p-3 navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <div id="logo"><img src="/images/output-onlinepngtools.png" alt="" class="logo">
+                <a class="navbar-brand fw-bold text-warning d-flex flex-column align-items-start" href="/index.html">
+                    <span class="brand-main">aarees</span>
+                    <span class="brand-sub">erfume</span>
+                </a></div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Collections
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item fw-bold" href="/dior.html">Dior</a></li>
+                                <li><a class="dropdown-item fw-bold" href="/ck.html">CK</a></li>
+                                <li><a class="dropdown-item fw-bold" href="/davidoff.html">Davidoff</a></li>
+                                <li><a class="dropdown-item fw-bold" href="/other.html">Other</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/Contact Us.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/faq.html">FAQ</a>
+                        </li>
+                    </ul>
+                    <a href="/login.html" class="btn btn-shop px-4 fw-bold">Login</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with AOS -->
+    <section class="hero-video-section">
+        <video autoplay muted loop playsinline>
+            <source
+                src="/About image/Unveiling the Magic of Oud_ 3D Animation Commercial for Amir One By Ajmal Perfumes.mp4"
+                type="video/mp4" />
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content text-center" data-aos="fade-up">
+            <h1 class="hero-title text-warning display-1">About Us</h1>
+            <p class="lead mt-3 d-none d-md-block">Discover the story behind our passion for exquisite fragrances</p>
+        </div>
+    </section>
+
+    <!-- featured section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+                    <h2 class="feature-section display-4 mb-3">Features</h2>
+                    <h3 class="mb-4 text-white">The Perfection</h3>
+                    <p class="text-white lead">Experience the flawless harmony of elegance and scent in every drop. Our
+                        perfumes are crafted with precision to deliver an unforgettable sensory journey.</p>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-md-6" data-aos="zoom-in">
+                            <div class="feature-box text-center">
+                                <i class="fa-solid fa-truck-fast fa-3x text-gold mb-3"></i>
+                                <h3>Free Shipping</h3>
+                                <p class="mb-0">Enjoy free shipping on every order, delivered straight to your door with
+                                    care and precision.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="feature-box text-center">
+                                <i class="fa-solid fa-headphones fa-3x text-gold mb-3"></i>
+                                <h3>24/7 Support</h3>
+                                <p class="mb-0">Get support whenever you need it, 24 hours a day, 7 days a week. Our
+                                    team is always here to help.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="feature-box text-center">
+                                <i class="fa-solid fa-gift fa-3x text-gold mb-3"></i>
+                                <h3>Elegant Packaging</h3>
+                                <p class="mb-0">Each perfume comes in beautifully designed packaging, perfect for
+                                    gifting or personal indulgence.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="feature-box text-center">
+                                <i class="fa-solid fa-award fa-3x text-gold mb-3"></i>
+                                <h3>Premium Quality</h3>
+                                <p class="mb-0">We source only the finest ingredients to create luxurious, long-lasting
+                                    fragrances that stand out.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="divider"></div>
+
+
+            <!-- Stats Section -->
+            <div class="row text-center mt-5 pt-5 stats" data-aos="fade-up">
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="value" data-count="13">0</div>
+                    <p>Years Experience</p>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="value" data-count="20">0</div>
+                    <p>Products</p>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="value" data-count="100">0+</div>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="value" data-count="11">0</div>
+                    <p>Outlets</p>
+                </div>
+            </div>
+        </div>
+    </section>
+            <div class="divider"></div>
+
+
+    <!-- About Product Section -->
+    <section class="py-5 bg-dark">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6" data-aos="fade-right">
+                    <img src="/About image/mockup.png" alt="Perfume" class="img-fluid rounded shadow" />
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <h4 class="feature-section display-4 mb-3">About</h4>
+                    <h2 class="text-white mb-4">The New Fresh Sensation</h2>
+                    <p class="lead mb-4">Discover a new, fresh sensation that awakens your senses and revitalizes your
+                        spirit. Every note is crafted to deliver a crisp, invigorating experience that lingers
+                        beautifully throughout the day.</p>
+                    <p>Our perfumes are created with a perfect balance of top, middle, and base notes that evolve over
+                        time, creating a unique scent journey that is exclusively yours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+            <div class="divider"></div>
+
+
+    <!-- Team Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="feature-section display-4 text-center mb-5">Our Team</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-member text-center">
+                        <img src="https://randomuser.me/api/portraits/men/20.jpg" alt="Muhammad Affan" class="team-img">
+                        <h5 class="fw-bold text-gold">Muhammad Affan</h5>
+                        <p class="mb-2">Team Leader | Visionary | Organizer</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-member text-center">
+                        <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Muhammad Saad Sultan"
+                            class="team-img">
+                        <h5 class="fw-bold text-gold">Muhammad Saad Sultan</h5>
+                        <p class="mb-2">Web Develpoer</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-member text-center">
+                        <img src="https://randomuser.me/api/portraits/men/40.jpg" alt="Abdullah" class="team-img">
+                        <h5 class="fw-bold text-gold">Abdullah</h5>
+                        <p class="mb-2">Web Developer</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="team-member text-center">
+                        <img src="https://randomuser.me/api/portraits/men/60.jpg" alt="Muhammad Ahmed Shaukat"
+                            class="team-img">
+                        <h5 class="fw-bold text-gold">Muhammad Ahmed Shaukat</h5>
+                        <p class="mb-2">Web Developer</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="team-member text-center">
+                        <img src="https://randomuser.me/api/portraits/men/51.jpg" alt="Muhammad Ghaus Shaukat"
+                            class="team-img">
+                        <h5 class="fw-bold text-gold">Muhammad Ghaus Shaukat</h5>
+                        <p class="mb-2">Web Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            <div class="divider"></div>
+
+
+    <!-- Perks & Benefits -->
+    <section class="py-5 bg-dark">
+        <div class="container">
+            <h4 class="Benefit display-4 text-center mb-3" data-aos="fade-up">Benefits</h4>
+            <h2 class="text-white text-center mb-5" data-aos="fade-up" data-aos-delay="100">Perks & Benefits</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-sm-6 col-lg-4" data-aos="flip-left">
+                    <div class="benefit-box text-center">
+                        <i class="fas fa-wallet fa-3x text-gold mb-3"></i>
+                        <h3>Quick Payment</h3>
+                        <p class="mb-0">Fast and secure payment options for a smooth and hassle-free checkout
+                            experience.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4" data-aos="flip-left" data-aos-delay="150">
+                    <div class="benefit-box text-center">
+                        <i class="fas fa-tags fa-3x text-gold mb-3"></i>
+                        <h3>Affordable Prices</h3>
+                        <p class="mb-0">Premium quality scents at prices that won't break the bank. Luxury for everyone.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4" data-aos="flip-left" data-aos-delay="300">
+                    <div class="benefit-box text-center">
+                        <i class="fas fa-percent fa-3x text-gold mb-3"></i>
+                        <h3>Big Deals</h3>
+                        <p class="mb-0">Unbeatable offers, seasonal discounts, and exclusive deals you can't afford to
+                            miss.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            <div class="divider"></div>
+
+
+    <!-- Promo Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6" data-aos="fade-right">
+                    <img src="/About image/Untitled design (1).png" alt="Perfume Promotion"
+                        class="img-fluid rounded shadow" />
+                </div>
+                <div class="col-md-6 text-center text-md-start" data-aos="fade-left">
+                    <h5 class="text-gold Discount display-4 mb-4">Perfume SALE 40% OFF</h5>
+                    <p class="lead mb-4">Awaken your inner allure with our exclusive collection. Your signature scent
+                        awaits. Life is too short to wear boring perfumes.</p>
+                    <p>Don't miss this limited-time opportunity to experience luxury at an exceptional value. Offer
+                        valid while supplies last.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-light pt-5 pb-4">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+
+                <!-- Company Info -->
+                <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Paarees Perfumes</h5>
+                    <p>
+                        We bring you an exclusive collection of perfumes from the most prestigious brands across the
+                        globe.
+                        Perfect fragrance for every occasion.
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Quick Links</h5>
+                    <p><a href="/index.html" class="text-light text-decoration-none footer-link">Home</a></p>
+                    <p><a href="/About.html" class="text-light text-decoration-none footer-link">About</a></p>
+                    <p><a href="/Contact Us.html" class="text-light text-decoration-none footer-link">Contact</a></p>
+                    <p><a href="/faq.html" class="text-light text-decoration-none footer-link">FAQ</a></p>
+                </div>
+                <!-- Categories -->
+                <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Collections</h5>
+                    <p><a href="dior.html" class="text-light text-decoration-none footer-link">Dior Perfumes</a></p>
+                    <p><a href="ck.html" class="text-light text-decoration-none footer-link">CK Perfumes</a></p>
+                    <p><a href="davidoff.html" class="text-light text-decoration-none footer-link">Davidoff Perfumes</a>
+                    </p>
+                    <p><a href="/other.html" class="text-light text-decoration-none footer-link">Other Perfumes</a></p>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                    <p><i class="fas fa-home me-2"></i> Karachi, Pakistan</p>
+                    <p>
+                        <i class="fas fa-envelope me-2"></i>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=affanwaseem475@gmail.com,entityblade99@gmail.com,abdullahxx776@gmail.com,saadsul32@gmail.com,opg091625@gmail.com"
+                            target="_blank" class="text-light text-decoration-none footer-link">
+                            info@paresperfumes.com
+                        </a>
+                    </p>
+
+
+                    <p><i class="fas fa-phone me-2"></i> +92 300 1234567</p>
+                </div>
+            </div>
+
+            <hr class="mb-4">
+
+            <!-- Social media + Copyright -->
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-start">
+                        © 2025 Paarees Perfumes | All Rights Reserved
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end">
+                        <a href="#" class="btn btn-outline-light btn-floating m-1 footer-link"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1 footer-link"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1 footer-link"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1 footer-link"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Counter animation for stats
+        document.addEventListener('DOMContentLoaded', function () {
+            const counters = document.querySelectorAll('.value');
+            const speed = 200;
+
+            counters.forEach(counter => {
+                const animate = () => {
+                    const value = +counter.getAttribute('data-count');
+                    const data = +counter.innerText;
+
+                    const time = value / speed;
+                    if (data < value) {
+                        counter.innerText = Math.ceil(data + time);
+                        setTimeout(animate, 1);
+                    } else {
+                        counter.innerText = value;
+                    }
+                }
+
+                animate();
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins&display=swap'>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    :root {
+      --primary-color: #c6c3c3;
+      --second-color: #ffffff;
+      --black-color: #000000;
+    }
+
+    .hero-video-section video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      object-fit: cover;
+      z-index: -1;
+      background: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.527));
+    }
+
+    body {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    a {
+      text-decoration: none;
+      color: gold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: gray;
+    }
+
+    .wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .login_box {
+      position: relative;
+      width: 450px;
+      backdrop-filter: blur(25px);
+      border: 2px solid var(--primary-color);
+      border-radius: 15px;
+      padding: 7.5em 2.5em 4em 2.5em;
+      color: var(--second-color);
+      box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .login-header {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--primary-color);
+      width: 140px;
+      height: 70px;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .login-header span {
+      font-size: 30px;
+      color: var(--black-color);
+    }
+
+    .login-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -30px;
+      width: 30px;
+      height: 30px;
+      border-top-right-radius: 50%;
+      background: transparent;
+      box-shadow: 15px 0 0 0 var(--primary-color);
+    }
+
+    .login-header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -30px;
+      width: 30px;
+      height: 30px;
+      border-top-left-radius: 50%;
+      background: transparent;
+      box-shadow: -15px 0 0 0 var(--primary-color);
+    }
+
+    .input_box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin: 20px 0;
+    }
+
+    .input-field {
+      width: 100%;
+      height: 55px;
+      font-size: 16px;
+      background: transparent;
+      color: var(--second-color);
+      padding-inline: 20px 50px;
+      border: 2px solid var(--primary-color);
+      border-radius: 30px;
+      outline: none;
+    }
+
+    #user {
+      margin-bottom: 10px;
+    }
+
+    .label {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      transition: 0.2s;
+    }
+
+    .input-field:focus~.label,
+    .input-field:valid~.label {
+      top: -10px;
+      left: 20px;
+      font-size: 14px;
+      background-color: var(--primary-color);
+      border-radius: 30px;
+      color: var(--black-color);
+      padding: 0 10px;
+    }
+
+    .icon {
+      position: absolute;
+      top: 18px;
+      right: 25px;
+      font-size: 20px;
+    }
+
+    .remember-forgot {
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+    }
+
+    .input-submit {
+      width: 100%;
+      height: 50px;
+      background: #ececec;
+      font-size: 16px;
+      font-weight: 500;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .input-submit:hover {
+      background: var(--second-color);
+    }
+
+    .register {
+      text-align: center;
+    }
+
+    .register a {
+      font-weight: 500;
+    }
+
+    @media only screen and (max-width: 564px) {
+      .wrapper {
+        padding: 20px;
+      }
+
+      .login_box {
+        padding: 7.5em 1.5em 4em 1.5em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero-video-section">
+    <video autoplay muted loop playsinline>
+      <source src="/images/WhatsApp Video 2025-10-17 at 3.34.12 AM.mp4" type="video/mp4" />
+    </video>
+  </section>
+
+  <div class="wrapper">
+    <div class="login_box" id="containerBox">
+      <div class="login-header">
+        <span>Login</span>
+      </div>
+
+      <!-- ✅ Wrapped inside form -->
+      <form id="loginForm">
+        <div class="input_box">
+          <input type="text" id="user" class="input-field" required>
+          <label for="user" class="label">Username</label>
+          <i class="bx bx-user icon"></i>
+        </div>
+
+        <div class="input_box">
+          <input type="password" id="pass" class="input-field" required>
+          <label for="pass" class="label">Password</label>
+          <i class="bx bx-lock-alt icon"></i>
+        </div>
+
+        <div class="remember-forgot">
+          <div class="remember-me">
+            <input type="checkbox" id="remember">
+            <label for="remember">Remember me</label>
+          </div>
+          <div class="forgot">
+            <a href="#">Forgot password?</a>
+          </div>
+        </div>
+
+        <div class="input_box">
+          <a href="/index.html"><input type="submit" class="input-submit" value="Login"></a>
+        </div>
+      </form>
+
+      <div class="register">
+        <span>Don't have an account? <a href="/register.html" id="signUpBtn">Register</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    // 🟢 Auto-add dummy user (only once)
+    (function () {
+      const key = 'paareesUser';
+      if (!localStorage.getItem(key)) {
+        const saadUser = {
+          name: "Saad Sultan, Abdullah, M.Affan, Ahmed",
+          email: "saadsultan234@gmail.com, saad@gmail.com",
+          password: "aptech"
+        };
+        localStorage.setItem(key, JSON.stringify(saadUser));
+      }
+    })();
+
+    // 🟢 Login system
+    $(document).ready(function () {
+      $('#loginForm').submit(function (e) {
+        e.preventDefault();
+
+        let username = $('#user').val().trim();
+        let pass = $('#pass').val().trim();
+        let stored = JSON.parse(localStorage.getItem('paareesUser'));
+
+        if (!stored) {
+          alert('No account found! Please register first.');
+          window.location.href = 'register.html';
+          return;
+        }
+
+        let names = stored.name.split(',').map(n => n.trim().toLowerCase());
+        let emails = stored.email.split(',').map(e => e.trim().toLowerCase());
+
+        if ((names.includes(username.toLowerCase()) || emails.includes(username.toLowerCase())) && pass === stored.password) {
+          localStorage.setItem('loggedIn', 'true');
+          alert('Login successful!');
+          window.location.href = 'index.html';
+        } else {
+          alert('Invalid username or password!');
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
